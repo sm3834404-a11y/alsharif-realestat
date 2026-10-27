@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الشريف للعقارات | إشراف الحاج أحمد الشريف</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#07111e',
+                            800: '#0a192f',
+                            700: '#0f2744',
+                            600: '#17365d',
+                            500: '#1e487a',
+                        },
+                        gold: {
+                            100: '#fbf5e8',
+                            300: '#e5cd8d',
+                            400: '#d9b668',
+                            500: '#d4af37',
+                            600: '#c5a059',
+                            700: '#9a7b38',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #07111e;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fceabb 0%, #d4af37 50%, #c5a059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+        }
+        .glass-card {
+            background: rgba(15, 39, 68, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-nav {
+            background: rgba(7, 17, 30, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07111e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #17365d;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- Top Announcement Bar -->
+    <div id="top-bar" class="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 border-b border-gold-500/30 py-2.5 px-4 text-xs sm:text-sm text-center text-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 font-bold text-gold-400">
+                <i class="fa-solid fa-user-shield text-lg"></i>
+                <span>تحت إشراف الحاج أحمد الشريف</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <span class="text-gray-300 hidden md:inline"><i class="fa-solid fa-location-dot text-gold-500 ml-1"></i>الفيوم الجديدة | حدائق أكتوبر | هرم سيتي</span>
+                <a href="tel:01005881885" class="hover:text-gold-400 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                    <span>01005881885</span>
+                </a>
+                <a href="tel:01003826695" class="hover:text-gold-400 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                    <span>01003826695</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Name -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center shadow-lg border border-gold-300/40">
+                        <i class="fa-solid fa-building text-navy-900 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-wide gold-gradient-text block">شركة الشريف للعقارات</span>
+                        <span class="text-[11px] text-gold-400/90 font-bold block">إشراف الحاج أحمد الشريف</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 space-x-reverse text-sm font-medium">
+                    <button onclick="navigateTo('home')" id="nav-home" class="nav-link text-gold-400 font-bold transition">الرئيسية</button>
+                    <button onclick="navigateTo('fayoum')" id="nav-fayoum" class="nav-link text-gray-300 hover:text-gold-400 transition">عقارات الفيوم الجديدة</button>
+                    <button onclick="navigateTo('october')" id="nav-october" class="nav-link text-gray-300 hover:text-gold-400 transition">عقارات حدائق أكتوبر</button>
+                    <button onclick="navigateTo('haram-city')" id="nav-haram-city" class="nav-link text-gray-300 hover:text-gold-400 transition">هرم سيتي</button>
+                    <button onclick="navigateTo('new-ads')" id="nav-new-ads" class="nav-link text-gold-300 hover:text-gold-400 font-bold transition flex items-center gap-1">
+                        <i class="fa-solid fa-bullhorn text-gold-500 animate-bounce"></i>
+                        <span>الإعلانات الجديدة</span>
+                    </button>
+                    <button onclick="navigateTo('about')" id="nav-about" class="nav-link text-gray-300 hover:text-gold-400 transition">من نحن</button>
+                    <button onclick="navigateTo('contact')" id="nav-contact" class="nav-link text-gray-300 hover:text-gold-400 transition">تواصل معنا</button>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openAddNewAdModal()" class="px-3 py-2 text-xs rounded-lg border border-gold-500/50 text-gold-400 hover:bg-gold-500/10 transition flex items-center gap-1.5" title="إضافة إعلان جديد وروافع صور">
+                        <i class="fa-solid fa-plus-circle text-gold-400"></i>
+                        <span>إضافة إعلان جديد</span>
+                    </button>
+                    <a href="https://wa.me/201005881885" target="_blank" class="px-4 py-2.5 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-md transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>واتساب</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <button onclick="openAddNewAdModal()" class="p-2 text-gold-400 hover:text-white" title="إضافة إعلان">
+                        <i class="fa-solid fa-plus-circle text-xl"></i>
+                    </button>
+                    <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-gold-400 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3">
+            <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-right py-2 text-gold-400 font-semibold border-b border-navy-700">الرئيسية</button>
+            <button onclick="navigateTo('fayoum'); toggleMobileMenu();" class="block w-full text-right py-2 text-gray-300 hover:text-gold-400 border-b border-navy-700">عقارات الفيوم الجديدة (مول الشريف)</button>
+            <button onclick="navigateTo('october'); toggleMobileMenu();" class="block w-full text-right py-2 text-gray-300 hover:text-gold-400 border-b border-navy-700">عقارات حدائق أكتوبر</button>
+            <button onclick="navigateTo('haram-city'); toggleMobileMenu();" class="block w-full text-right py-2 text-gray-300 hover:text-gold-400 border-b border-navy-700">هرم سيتي حدائق أكتوبر</button>
+            <button onclick="navigateTo('new-ads'); toggleMobileMenu();" class="block w-full text-right py-2 text-gold-400 font-bold border-b border-navy-700">📢 الإعلانات الجديدة والعروض الخاصة</button>
+            <button onclick="navigateTo('about'); toggleMobileMenu();" class="block w-full text-right py-2 text-gray-300 hover:text-gold-400 border-b border-navy-700">من نحن</button>
+            <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-right py-2 text-gray-300 hover:text-gold-400 border-b border-navy-700">تواصل معنا</button>
+            
+            <a href="https://wa.me/201005881885" target="_blank" class="w-full mt-4 py-3 rounded-lg bg-emerald-600 text-white font-bold text-center block shadow flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>تواصل عبر واتساب (01005881885)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main id="app-container" class="flex-grow">
+        <!-- SPA Pages content rendered here -->
+    </main>
+
+    <!-- Modal: Property Details & Image Gallery -->
+    <div id="property-modal" class="fixed inset-0 z-50 hidden bg-navy-900/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div id="property-modal-content" class="bg-navy-800 border border-gold-500/40 rounded-2xl max-w-4xl w-full my-8 max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <!-- Modal Header & Details inserted dynamically -->
+        </div>
+    </div>
+
+    <!-- Modal: Add New Ad / Upload Multiple Images -->
+    <div id="add-ad-modal" class="fixed inset-0 z-50 hidden bg-navy-900/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-navy-800 border border-gold-500/40 rounded-2xl max-w-2xl w-full p-6 space-y-5 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-navy-700 pb-3">
+                <h3 class="text-xl font-bold text-gold-400 flex items-center gap-2">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>إضافة إعلان جديد / رفع صور متعدّدة</span>
+                </h3>
+                <button onclick="closeAddAdModal()" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleAdSubmission(event)" class="space-y-4 text-sm">
+                <div>
+                    <label class="block font-semibold text-gold-400 mb-1">عنوان الإعلان *</label>
+                    <input type="text" id="ad-title" required placeholder="مثال: محلات تجارية للبيع بالتقسيط..." class="w-full bg-navy-900 border border-navy-600 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-gold-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-semibold text-gold-400 mb-1">منطقة العقار *</label>
+                        <select id="ad-region" required class="w-full bg-navy-900 border border-navy-600 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-gold-500">
+                            <option value="fayoum">عقارات الفيوم الجديدة (مول الشريف)</option>
+                            <option value="october">عقارات حدائق أكتوبر</option>
+                            <option value="haram-city">هرم سيتي حدائق أكتوبر</option>
+                            <option value="new-ads">الإعلانات الجديدة والعروض الخاصة</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-gold-400 mb-1">التصنيف/النوع *</label>
+                        <select id="ad-type" required class="w-full bg-navy-900 border border-navy-600 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-gold-500">
+                            <option value="شقة">شقق فاخرة</option>
+                            <option value="مكتب">إيجار/بيع مساحات مكاتب</option>
+                            <option value="محل">محل / تجاري</option>
+                            <option value="أرض">أراضي استثمارية</option>
+                            <option value="عيادة/مركز طبي">عيادة / مركز طبي</option>
+                            <option value="جيم/نشاط">جيم / نشاط رياضي</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-gold-400 mb-1">تفاصيل وصف الإعلان *</label>
+                    <textarea id="ad-description" rows="3" required placeholder="اكتب التفاصيل بالكامل هنا..." class="w-full bg-navy-900 border border-navy-600 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-gold-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-gold-400 mb-1">رفع صور الإعلان (يمكن اختيار صور متعددة من جهازك) *</label>
+                    <input type="file" id="ad-images" multiple accept="image/*" class="block w-full text-xs text-gray-400 file:mr-0 file:ml-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-gold-500 file:text-navy-900 hover:file:bg-gold-600 cursor-pointer">
+                    <span class="text-[11px] text-gray-400 mt-1 block">يمكنك اختيار أكثر من صورة في نفس الوقت لجعل الإعلان مزود بمعرض صور.</span>
+                </div>
+
+                <div class="pt-3 border-t border-navy-700 flex justify-end gap-3">
+                    <button type="button" onclick="closeAddAdModal()" class="px-5 py-2.5 rounded-xl border border-navy-600 text-gray-300 font-bold hover:bg-navy-700">إلغاء</button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-900 font-extrabold shadow">حفظ ونشر الإعلان</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Alert Container -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 max-w-sm bg-navy-800 border border-gold-500 text-white p-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <div id="toast-icon" class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <h4 id="toast-title" class="font-bold text-sm text-gold-400">إشعار</h4>
+            <p id="toast-message" class="text-xs text-gray-300">تمت العملية بنجاح</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-gold-500/20 text-gray-400 text-sm mt-16">
+        <!-- Prominent Banner for Supervisor -->
+        <div class="bg-navy-800/80 border-b border-gold-500/30 py-4 px-4 text-center">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="flex items-center gap-3 text-gold-400 font-extrabold text-base sm:text-lg">
+                    <i class="fa-solid fa-award text-2xl"></i>
+                    <span>شركة الشريف للعقارات - تحت إشراف الحاج أحمد الشريف</span>
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs font-bold text-white">
+                    <a href="tel:01005881885" class="bg-navy-700 border border-gold-500/40 px-3 py-1.5 rounded-lg hover:border-gold-500 transition">
+                        <i class="fa-solid fa-phone text-emerald-400 ml-1"></i>01005881885
+                    </a>
+                    <a href="tel:01003826695" class="bg-navy-700 border border-gold-500/40 px-3 py-1.5 rounded-lg hover:border-gold-500 transition">
+                        <i class="fa-solid fa-phone text-emerald-400 ml-1"></i>01003826695
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded bg-gold-500 flex items-center justify-center text-navy-900 font-bold text-xl">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <span class="text-xl font-bold gold-gradient-text">شركة الشريف للعقارات</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        نوفر لكم أفضل الوحدات التجارية، السكنية، الطبية، والمكاتب في الفيوم الجديدة، حدائق أكتوبر، وهرم سيتي، بأعلى مستويات المصداقية والتسهيلات بالتقسيط المريح.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="text-gold-400 font-bold text-base mb-4">مناطق العقارات</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><button onclick="navigateTo('fayoum')" class="hover:text-gold-400 transition">عقارات الفيوم الجديدة (مول الشريف)</button></li>
+                        <li><button onclick="navigateTo('october')" class="hover:text-gold-400 transition">عقارات حدائق أكتوبر</button></li>
+                        <li><button onclick="navigateTo('haram-city')" class="hover:text-gold-400 transition">هرم سيتي - حدائق أكتوبر</button></li>
+                        <li><button onclick="navigateTo('new-ads')" class="hover:text-gold-400 transition font-bold text-gold-300">الإعلانات الجديدة والعروض الخاصة</button></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Phone Direct -->
+                <div>
+                    <h4 class="text-gold-400 font-bold text-base mb-4">أرقام التواصل المباشرة</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone-volume text-gold-500 w-4"></i>
+                            <a href="tel:01005881885" class="hover:text-gold-400 font-bold">01005881885</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone-volume text-gold-500 w-4"></i>
+                            <a href="tel:01003826695" class="hover:text-gold-400 font-bold">01003826695</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 w-4 text-sm"></i>
+                            <a href="https://wa.me/201005881885" target="_blank" class="hover:text-emerald-400 font-bold">واتساب: 01005881885</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Regions -->
+                <div>
+                    <h4 class="text-gold-400 font-bold text-base mb-4">مواقع المشاريع</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-3">
+                        تتوزع مشاريع وعقارات شركة الشريف في:
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-gold-300">
+                        <li><i class="fa-solid fa-check text-gold-500 ml-1"></i> مول الشريف - الفيوم الجديدة</li>
+                        <li><i class="fa-solid fa-check text-gold-500 ml-1"></i> حدائق أكتوبر (مسلسل 2 و 3)</li>
+                        <li><i class="fa-solid fa-check text-gold-500 ml-1"></i> مول الشريف - هرم سيتي</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-t border-navy-800 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+                <div>
+                    &copy; <span id="current-year">2026</span> شركة الشريف للعقارات. جميع الحقوق محفوظة - تحت إشراف الحاج أحمد الشريف.
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="openAddNewAdModal()" class="hover:text-gold-400 text-gold-500 font-bold">إضافة إعلان جديد</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Data & Logic -->
+    <script>
+        document.getElementById('current-year').innerText = new Date().getFullYear();
+
+        // Standard Default Data provided by client categorized accurately
+        const initialPropertiesData = [
+            // --- 1. عقارات الفيوم الجديدة (مول الشريف) ---
+            {
+                id: 'fayoum-1',
+                region: 'fayoum',
+                title: 'سوبر ماركت للبيع أو الإيجار داخل مول الشريف',
+                type: 'محل',
+                description: 'متاح سوبر ماركت للبيع أو الإيجار بمساحات تبدأ من 40م حتى 120م داخل مول الشريف بالفيوم الجديدة. متاح قسط على سنتين 🔥',
+                badge: 'قسط سنتين',
+                images: [
+                    'https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-2',
+                region: 'fayoum',
+                title: 'محلات للبيع بمساحات مختلفة مناسبة لجميع الأنشطة',
+                type: 'محل',
+                description: 'متاح محلات تجارية للبيع بمساحات مختلفة تناسب كافة الأنشطة داخل مول الشريف بالفيوم الجديدة، متاح تقسيط على سنتين 🔥',
+                badge: 'قسط سنتين',
+                images: [
+                    'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-3',
+                region: 'fayoum',
+                title: 'محلات دوبلكس أرضي وعلمي للبيع',
+                type: 'محل',
+                description: 'متاح محلات دوبلكس (أرضي وعلمي) للبيع بمساحات 60م. يوجد نظام تقسيط مريح وتسهيلات مع خصم مميز للكاش 🔥',
+                badge: 'خصم للكاش',
+                images: [
+                    'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-4',
+                region: 'fayoum',
+                title: 'مكتب للبيع مساحة 65م ثاني علوي بسعر تجاري',
+                type: 'مكتب',
+                description: 'متاح مكتب للبيع مساحة 65م بالدور الثاني العلوي بسعر تجاري مميز جداً داخل مول الشريف بالفيوم الجديدة 🔥',
+                badge: 'سعر تجاري',
+                images: [
+                    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-5',
+                region: 'fayoum',
+                title: 'مركز طبي للبيع دور ثاني علوي داخل المول',
+                type: 'عيادة/مركز طبي',
+                description: 'يوجد مركز طبي للبيع بمساحة 120م دور ثان علوي داخل مول الشريف بالفيوم الجديدة (بالتقسيط المريح) 🔥',
+                badge: 'تقسيط مريح',
+                images: [
+                    'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-6',
+                region: 'fayoum',
+                title: 'معمل تحاليل للبيع داخل مول الشريف',
+                type: 'عيادة/مركز طبي',
+                description: 'يوجد معمل تحاليل للبيع بمساحة 120م دور ثان علوي داخل المول بالفيوم الجديدة (بالتقسيط المريح) 🔥',
+                badge: 'تقسيط مريح',
+                images: [
+                    'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-7',
+                region: 'fayoum',
+                title: 'عيادة مجهزة للبيع دور ثاني علوي',
+                type: 'عيادة/مركز طبي',
+                description: 'يوجد عيادة للبيع مساحة 120م دور ثان علوي داخل مول الشريف بالفيوم الجديدة (بالتقسيط المريح) 🔥',
+                badge: 'تقسيط مريح',
+                images: [
+                    'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-8',
+                region: 'fayoum',
+                title: 'جيم للبيع أو الإيجار بمساحة 450م',
+                type: 'جيم/نشاط',
+                description: 'متاح جيم رياضي للبيع أو الإيجار بالدور الثالث العلوي بمساحة واسعة 450م بالتقسيط المريح داخل مول الشريف بالفيوم الجديدة 🔥',
+                badge: 'مساحة كبرى',
+                images: [
+                    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'fayoum-9',
+                region: 'fayoum',
+                title: 'شقق للبيع بمساحات متنوعة بالتقسيط المريح',
+                type: 'شقة',
+                description: 'متاح شقق للبيع بمساحات تبدأ من 70م حتى 180م بالفيوم الجديدة (بالتقسيط المريح) 🔥',
+                badge: 'مساحات متعددة',
+                images: [
+                    'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+
+            // --- 2. عقارات حدائق أكتوبر ---
+            {
+                id: 'oct-1',
+                region: 'october',
+                title: 'شقتين للبيع نصف تشطيب - مسلسل 3 شارع رئيسي',
+                type: 'شقة',
+                description: 'متاح شقتين للبيع نصف تشطيب (محارة وحلوق) بمسلسل 3 على شارع رئيسي بمساحة 155م - استلام فورى 🔥',
+                badge: 'استلام فوري',
+                images: [
+                    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'oct-2',
+                region: 'october',
+                title: 'شقة للبيع 170م نصف تشطيب - مسلسل 3 شارع رئيسي',
+                type: 'شقة',
+                description: 'متاح شقة للبيع نصف تشطيب (محارة وحلوق) مسلسل 3 شارع رئيسي مساحة 170م - استلام فوري 🔥',
+                badge: 'استلام فوري',
+                images: [
+                    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'oct-3',
+                region: 'october',
+                title: 'فيلا دوبلكس أرضي ببزمنت وحديقة مساحة 365م',
+                type: 'شقة',
+                description: 'متاح فيلا دوبلكس أرضي ببزمنت وجنينة مساحة 365م بمسلسل 3 شارع رئيسي بحدائق أكتوبر 🔥',
+                badge: 'فيلا دوبلكس',
+                images: [
+                    'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'oct-4',
+                region: 'october',
+                title: 'شقة أرضي بجاردن 160م + 100م تشطيب سوبر لوكس',
+                type: 'شقة',
+                description: 'متاح شقة للبيع أرضي بجاردن 160م + جاردن 100م تشطيب سوبر لوكس بمسلسل 2 (المربع الذهبي) بحدائق أكتوبر 🔥',
+                badge: 'سوبر لوكس',
+                images: [
+                    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'oct-5',
+                region: 'october',
+                title: 'محل للبيع بمول تجاري أول علوي مقابل كمبوند بيت المصريين',
+                type: 'محل',
+                description: 'يوجد محل للبيع بمول تجاري مساحة 36م دور أول علوي مقابل كمبوند بيت المصريين بحدائق أكتوبر 🔥',
+                badge: 'مقابل كمبوند',
+                images: [
+                    'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'oct-6',
+                region: 'october',
+                title: 'محل للايجار 48م لجميع الأنشطة مقابل كمبوند بيت المصريين',
+                type: 'محل',
+                description: 'متاح محل للإيجار مساحة 48م يناسب جميع الأنشطة التجارية مقابل كمبوند بيت المصريين بحدائق أكتوبر 🔥',
+                badge: 'متاح للإيجار',
+                images: [
+                    'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+
+            // --- 3. عقارات هرم سيتي حدائق أكتوبر (مول الشريف) ---
+            {
+                id: 'haram-1',
+                region: 'haram-city',
+                title: 'محل كوافير مساحة 60م للإيجار في مول الشريف هرم سيتي',
+                type: 'محل',
+                description: 'متاح محل كوافير مساحة 60م للإيجار بمول الشريف هرم سيتي بحدائق أكتوبر 🔥',
+                badge: 'للإيجار',
+                images: [
+                    'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'haram-2',
+                region: 'haram-city',
+                title: 'محل ملابس للإيجار مساحة 50م في مول الشريف هرم سيتي',
+                type: 'محل',
+                description: 'متاح محل ملابس جاهز للإيجار بمساحة 50م في مول الشريف هرم سيتي 🔥',
+                badge: 'للإيجار',
+                images: [
+                    'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'haram-3',
+                region: 'haram-city',
+                title: 'محل أتيليه أو ملابس حريمي مساحة 65م',
+                type: 'محل',
+                description: 'يوجد محل أتيليه أو ملابس حريمي بمساحة 65م في مول الشريف هرم سيتي بحدائق أكتوبر 🔥',
+                badge: 'موقع مميز',
+                images: [
+                    'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'haram-4',
+                region: 'haram-city',
+                title: 'محل للبيع مساحة 52م متأجر أدوات منزلية',
+                type: 'محل',
+                description: 'متاح محل للبيع بمساحة 52م (مؤجر حالياً بنشاط أدوات منزلية ودخل مضمون) في مول الشريف هرم سيتي 🔥',
+                badge: 'استثمار بدخل',
+                images: [
+                    'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            {
+                id: 'haram-5',
+                region: 'haram-city',
+                title: 'محلات للإيجار أو البيع من 30م حتى 65م بمول الشريف',
+                type: 'محل',
+                description: 'متاح محلات للإيجار أو البيع بمساحات تتراوح من 30م حتى 65م في مول الشريف هرم سيتي 🔥',
+                badge: 'بيع وإيجار',
+                images: [
+                    'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80'
+                ]
+            }
+        ];
+
+        let allProperties = [];
+
+        function loadAllProperties() {
+            const stored = localStorage.getItem('alsharif_all_props_v2');
+            if (stored) {
+                try {
+                    allProperties = JSON.parse(stored);
+                } catch(e) {
+                    allProperties = [...initialPropertiesData];
+                }
+            } else {
+                allProperties = [...initialPropertiesData];
+            }
+        }
+        loadAllProperties();
+
+        let currentPage = 'home';
+
+        function navigateTo(pageId) {
+            currentPage = pageId;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('text-gold-400', 'font-bold'));
+            const activeNav = document.getElementById(`nav-${pageId}`);
+            if (activeNav) activeNav.classList.add('text-gold-400', 'font-bold');
+
+            const container = document.getElementById('app-container');
+
+            if (pageId === 'home') {
+                container.innerHTML = renderHomePage();
+            } else if (pageId === 'fayoum') {
+                container.innerHTML = renderRegionPage('fayoum', 'عقارات الفيوم الجديدة (مول الشريف)', 'استعرض كافة المحلات والمكاتب والمراكز الطبية والشقق المتاحة بالفيوم الجديدة.');
+            } else if (pageId === 'october') {
+                container.innerHTML = renderRegionPage('october', 'عقارات حدائق أكتوبر', 'أفضل الشقق والدوبلكس والمحلات بمسلسل 2 و 3 والمربع الذهبي.');
+            } else if (pageId === 'haram-city') {
+                container.innerHTML = renderRegionPage('haram-city', 'هرم سيتي - حدائق أكتوبر (مول الشريف)', 'محلات للبيع والإيجار بمختلف الأنشطة والتخصصات.');
+            } else if (pageId === 'new-ads') {
+                container.innerHTML = renderRegionPage('new-ads', '📢 الإعلانات الجديدة والعروض الخاصة', 'تصفح الإعلانات المضافة حديثاً أو قم برفع إعلانك وصورك الخاصة مباشرة.');
+            } else if (pageId === 'about') {
+                container.innerHTML = renderAboutPage();
+            } else if (pageId === 'contact') {
+                container.innerHTML = renderContactPage();
+            }
+        }
+
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-message').innerText = message;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+
+        // --- HOMEPAGE RENDERER ---
+        function renderHomePage() {
+            const fayoumList = allProperties.filter(p => p.region === 'fayoum').slice(0, 3);
+            const octList = allProperties.filter(p => p.region === 'october').slice(0, 3);
+            const haramList = allProperties.filter(p => p.region === 'haram-city').slice(0, 3);
+            const newAdsList = allProperties.filter(p => p.region === 'new-ads');
+
+            return `
+                <!-- Hero Section -->
+                <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
+                             alt="شركة الشريف للعقارات" class="w-full h-full object-cover object-center opacity-25 scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-navy-900/50"></div>
+                    </div>
+
+                    <div class="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-gold-500/40 text-gold-400 text-xs sm:text-sm font-bold">
+                            <i class="fa-solid fa-crown text-gold-400"></i>
+                            <span>تحت إشراف الحاج أحمد الشريف</span>
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-tight">
+                            شركة الشريف للعقارات
+                            <span class="block text-xl sm:text-3xl md:text-4xl mt-3 font-bold gold-gradient-text">
+                                الفيوم الجديدة | حدائق أكتوبر | هرم سيتي
+                            </span>
+                        </h1>
+
+                        <p class="max-w-3xl mx-auto text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+                            نفرّ لكم أفضل الفرص العقارية (شقق فاخرة، مكاتب إيجار، محلات تجارية، عيادات ومراكز طبية، جيم، وأراضي استثمارية) بالتقسيط المريح.
+                        </p>
+
+                        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                            <button onclick="navigateTo('fayoum')" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-900 font-extrabold text-sm shadow-xl gold-border-glow transition">
+                                <i class="fa-solid fa-building ml-1"></i>
+                                عقارات الفيوم الجديدة
+                            </button>
+                            <button onclick="navigateTo('october')" class="px-6 py-3.5 rounded-xl glass-card text-gold-300 border border-gold-500/50 hover:bg-gold-500/10 font-bold text-sm transition">
+                                <i class="fa-solid fa-city ml-1"></i>
+                                عقارات حدائق أكتوبر
+                            </button>
+                            <button onclick="navigateTo('new-ads')" class="px-6 py-3.5 rounded-xl bg-navy-800 border border-gold-500 text-gold-400 font-bold text-sm transition">
+                                <i class="fa-solid fa-bullhorn ml-1"></i>
+                                الإعلانات الجديدة
+                            </button>
+                        </div>
+
+                        <!-- Fast Phone Row -->
+                        <div class="pt-6 flex flex-wrap justify-center gap-6 text-sm font-bold text-gray-200">
+                            <a href="tel:01005881885" class="flex items-center gap-2 hover:text-gold-400 bg-navy-800/80 px-4 py-2 rounded-xl border border-navy-700">
+                                <i class="fa-solid fa-phone text-emerald-400"></i>
+                                <span>01005881885</span>
+                            </a>
+                            <a href="tel:01003826695" class="flex items-center gap-2 hover:text-gold-400 bg-navy-800/80 px-4 py-2 rounded-xl border border-navy-700">
+                                <i class="fa-solid fa-phone text-emerald-400"></i>
+                                <span>01003826695</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categorized Regions Preview -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+                    
+                    <!-- Fayoum Section -->
+                    <div>
+                        <div class="flex justify-between items-end mb-8 border-b border-navy-700 pb-4">
+                            <div>
+                                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">مول الشريف</span>
+                                <h2 class="text-2xl sm:text-3xl font-black text-white">عقارات الفيوم الجديدة</h2>
+                            </div>
+                            <button onclick="navigateTo('fayoum')" class="text-gold-400 hover:text-gold-300 text-xs font-bold flex items-center gap-1">
+                                <span>عرض الكل (${allProperties.filter(p => p.region === 'fayoum').length})</span>
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            ${fayoumList.map(prop => createPropertyCardHTML(prop)).join('')}
+                        </div>
+                    </div>
+
+                    <!-- October Section -->
+                    <div>
+                        <div class="flex justify-between items-end mb-8 border-b border-navy-700 pb-4">
+                            <div>
+                                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">مسلسل 2 و 3 والمربع الذهبي</span>
+                                <h2 class="text-2xl sm:text-3xl font-black text-white">عقارات حدائق أكتوبر</h2>
+                            </div>
+                            <button onclick="navigateTo('october')" class="text-gold-400 hover:text-gold-300 text-xs font-bold flex items-center gap-1">
+                                <span>عرض الكل (${allProperties.filter(p => p.region === 'october').length})</span>
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            ${octList.map(prop => createPropertyCardHTML(prop)).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Haram City Section -->
+                    <div>
+                        <div class="flex justify-between items-end mb-8 border-b border-navy-700 pb-4">
+                            <div>
+                                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">مول الشريف هرم سيتي</span>
+                                <h2 class="text-2xl sm:text-3xl font-black text-white">هرم سيتي - حدائق أكتوبر</h2>
+                            </div>
+                            <button onclick="navigateTo('haram-city')" class="text-gold-400 hover:text-gold-300 text-xs font-bold flex items-center gap-1">
+                                <span>عرض الكل (${allProperties.filter(p => p.region === 'haram-city').length})</span>
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            ${haramList.map(prop => createPropertyCardHTML(prop)).join('')}
+                        </div>
+                    </div>
+
+                    <!-- New Ads Section (If any exist) -->
+                    ${newAdsList.length > 0 ? `
+                        <div>
+                            <div class="flex justify-between items-end mb-8 border-b border-navy-700 pb-4">
+                                <div>
+                                    <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">جديد</span>
+                                    <h2 class="text-2xl sm:text-3xl font-black text-white">الإعلانات والعروض المضافة حديثاً</h2>
+                                </div>
+                                <button onclick="navigateTo('new-ads')" class="text-gold-400 text-xs font-bold flex items-center gap-1">
+                                    <span>عرض الكل (${newAdsList.length})</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                ${newAdsList.slice(0, 3).map(prop => createPropertyCardHTML(prop)).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                </section>
+            `;
+        }
+
+        // --- REGION PAGE RENDERER ---
+        function renderRegionPage(regionKey, title, description) {
+            const items = allProperties.filter(p => p.region === regionKey);
+
+            return `
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+                        <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">شركة الشريف للعقارات</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-white">${title}</h1>
+                        <p class="text-gray-300 text-sm leading-relaxed">${description}</p>
+                        <div class="pt-2 text-xs font-bold text-gold-400">
+                            تحت إشراف الحاج أحمد الشريف | للتواصل: 01005881885 - 01003826695
+                        </div>
+                    </div>
+
+                    ${items.length > 0 ? `
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            ${items.map(prop => createPropertyCardHTML(prop)).join('')}
+                        </div>
+                    ` : `
+                        <div class="text-center py-16 glass-card rounded-2xl border border-navy-700 space-y-4">
+                            <i class="fa-solid fa-bullhorn text-4xl text-gold-500"></i>
+                            <h3 class="text-lg font-bold text-white">لا توجد إعلانات مضافة في هذا القسم حالياً</h3>
+                            <p class="text-xs text-gray-400">يمكنك إضافة إعلانك وصورك الآن بالضغط على الزر أدناه.</p>
+                            <button onclick="openAddNewAdModal()" class="px-6 py-2.5 bg-gold-500 text-navy-900 font-bold text-xs rounded-xl">إضافة إعلان جديد</button>
+                        </div>
+                    `}
+                </section>
+            `;
+        }
+
+        // --- PROPERTY CARD GENERATOR (Cleaned from unnecessary area/region labels, with Multi-Image count badge) ---
+        function createPropertyCardHTML(prop) {
+            const images = prop.images && prop.images.length > 0 ? prop.images : ['https://placehold.co/600x400/0f2744/d4af37?text=صورة+العقار'];
+            const mainImg = images[0];
+            const imgCount = images.length;
+
+            return `
+                <div class="glass-card rounded-2xl overflow-hidden border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 flex flex-col group">
+                    <!-- Image Box -->
+                    <div class="relative h-56 overflow-hidden bg-navy-900 cursor-pointer" onclick="openPropertyModal('${prop.id}')">
+                        <img src="${mainImg}" alt="${prop.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0f2744/d4af37?text=صورة+العقار'">
+                        
+                        <div class="absolute top-3 right-3 bg-navy-900/85 backdrop-blur-md border border-gold-500/40 text-gold-400 text-xs px-3 py-1 rounded-full font-bold">
+                            ${prop.type || 'عقار'}
+                        </div>
+
+                        ${prop.badge ? `
+                            <div class="absolute top-3 left-3 bg-gold-500 text-navy-900 text-xs px-2.5 py-1 rounded-full font-black">
+                                ${prop.badge}
+                            </div>
+                        ` : ''}
+
+                        <!-- Multi-Image Count Indicator -->
+                        <div class="absolute bottom-3 left-3 bg-navy-900/90 text-white text-[11px] px-2.5 py-1 rounded-lg border border-navy-700 flex items-center gap-1">
+                            <i class="fa-solid fa-images text-gold-400"></i>
+                            <span>${imgCount} صور</span>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-5 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-gold-400 transition mb-2 leading-snug cursor-pointer" onclick="openPropertyModal('${prop.id}')">${prop.title}</h3>
+                            <p class="text-xs text-gray-300 line-clamp-3 leading-relaxed mb-3">${prop.description}</p>
+                        </div>
+
+                        <div class="pt-3 border-t border-navy-700 space-y-3">
+                            <div class="text-[11px] text-gold-400 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-user-check"></i>
+                                <span>إشراف الحاج أحمد الشريف</span>
+                            </div>
+
+                            <div class="flex gap-2">
+                                <button onclick="openPropertyModal('${prop.id}')" class="flex-grow py-2.5 rounded-xl bg-navy-800 hover:bg-navy-700 border border-gold-500/40 text-gold-400 text-xs font-bold transition flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-images"></i>
+                                    <span>عرض التفاصيل والصور (${imgCount})</span>
+                                </button>
+                                <a href="https://wa.me/201005881885?text=${encodeURIComponent('مرحبًا شركة الشريف، أريد الاستفسار عن: ' + prop.title)}" target="_blank" class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center" title="واتساب">
+                                    <i class="fa-brands fa-whatsapp text-base"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- PROPERTY DETAILS & GALLERY MODAL ---
+        function openPropertyModal(id) {
+            const prop = allProperties.find(p => p.id === id);
+            if (!prop) return;
+
+            const modal = document.getElementById('property-modal');
+            const content = document.getElementById('property-modal-content');
+            const images = prop.images && prop.images.length > 0 ? prop.images : ['https://placehold.co/800x500/0f2744/d4af37?text=صورة+العقار'];
+
+            content.innerHTML = `
+                <div class="p-4 border-b border-navy-700 flex justify-between items-center bg-navy-900">
+                    <span class="text-gold-400 font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <span>${prop.title}</span>
+                    </span>
+                    <button onclick="closePropertyModal()" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="p-6 overflow-y-auto space-y-6 text-sm">
+                    <!-- Main Gallery Photo Viewer -->
+                    <div class="space-y-3">
+                        <div class="h-64 sm:h-96 rounded-xl overflow-hidden bg-navy-900 border border-navy-700 relative">
+                            <img id="modal-main-image" src="${images[0]}" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Thumbnails for Multiple Photos -->
+                        <div class="flex gap-2 overflow-x-auto pb-2">
+                            ${images.map((img, idx) => `
+                                <img src="${img}" onclick="document.getElementById('modal-main-image').src='${img}'" class="w-16 h-16 rounded-lg object-cover cursor-pointer border-2 hover:border-gold-500 border-navy-700 transition flex-shrink-0">
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Upload Additional Photos Section -->
+                    <div class="p-4 bg-navy-900/70 rounded-xl border border-gold-500/30 space-y-2">
+                        <label class="block font-bold text-gold-400 text-xs">إضافة أو رفع صور جديدة لهذه الوحدة:</label>
+                        <input type="file" multiple accept="image/*" onchange="uploadMoreImagesForProp(event, '${prop.id}')" class="block w-full text-xs text-gray-400 file:mr-0 file:ml-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-gold-500 file:text-navy-900 cursor-pointer">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="space-y-2 border-t border-navy-700 pt-4">
+                        <h4 class="font-bold text-gold-400 text-base">تفاصيل العقار:</h4>
+                        <p class="text-gray-200 text-xs sm:text-sm leading-relaxed">${prop.description}</p>
+                    </div>
+
+                    <!-- Contact & Supervisor Note -->
+                    <div class="p-4 rounded-xl bg-navy-900/80 border border-navy-700 space-y-2 text-center">
+                        <span class="block text-gold-400 font-extrabold text-sm">تحت إشراف الحاج أحمد الشريف</span>
+                        <div class="flex flex-wrap justify-center gap-4 text-xs font-bold text-white pt-1">
+                            <span><i class="fa-solid fa-phone text-emerald-400 ml-1"></i>01005881885</span>
+                            <span><i class="fa-solid fa-phone text-emerald-400 ml-1"></i>01003826695</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="p-4 border-t border-navy-700 bg-navy-900/50 flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/201005881885?text=${encodeURIComponent('مرحبًا شركة الشريف، أريد الاستفسار عن تفاصيل: ' + prop.title)}" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>تواصل واتساب (01005881885)</span>
+                    </a>
+                    <a href="tel:01005881885" class="px-6 py-3 rounded-xl bg-gold-500 text-navy-900 font-extrabold text-sm hover:bg-gold-600 text-center">
+                        اتصال هاتفي
+                    </a>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+        }
+
+        function closePropertyModal() {
+            document.getElementById('property-modal').classList.add('hidden');
+        }
+
+        function uploadMoreImagesForProp(event, propId) {
+            const files = event.target.files;
+            if (!files || files.length === 0) return;
+
+            const targetProp = allProperties.find(p => p.id === propId);
+            if (!targetProp) return;
+
+            let loadedCount = 0;
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    targetProp.images.push(e.target.result);
+                    loadedCount++;
+                    if (loadedCount === files.length) {
+                        localStorage.setItem('alsharif_all_props_v2', JSON.stringify(allProperties));
+                        showToast('تم حفظ الصور', 'تمت إضافة الصور الجديدة بنجاح للمعرض!');
+                        openPropertyModal(propId);
+                        navigateTo(currentPage);
+                    }
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // --- NEW AD CREATION & PHOTO UPLOADER ---
+        function openAddNewAdModal() {
+            document.getElementById('add-ad-modal').classList.remove('hidden');
+        }
+
+        function closeAddAdModal() {
+            document.getElementById('add-ad-modal').classList.add('hidden');
+        }
+
+        function handleAdSubmission(e) {
+            e.preventDefault();
+            const title = document.getElementById('ad-title').value;
+            const region = document.getElementById('ad-region').value;
+            const type = document.getElementById('ad-type').value;
+            const description = document.getElementById('ad-description').value;
+            const fileInput = document.getElementById('ad-images');
+
+            const newId = 'custom-ad-' + Date.now();
+            const images = [];
+
+            if (fileInput.files && fileInput.files.length > 0) {
+                let filesLoaded = 0;
+                Array.from(fileInput.files).forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function(evt) {
+                        images.push(evt.target.result);
+                        filesLoaded++;
+                        if (filesLoaded === fileInput.files.length) {
+                            saveAndPublishAd(newId, region, title, type, description, images);
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                });
+            } else {
+                images.push('https://placehold.co/800x500/0f2744/d4af37?text=صورة+الإعلان');
+                saveAndPublishAd(newId, region, title, type, description, images);
+            }
+        }
+
+        function saveAndPublishAd(id, region, title, type, description, images) {
+            const newAdObj = {
+                id: id,
+                region: region,
+                title: title,
+                type: type,
+                description: description,
+                badge: 'إعلان جديد',
+                images: images
+            };
+
+            allProperties.unshift(newAdObj);
+            localStorage.setItem('alsharif_all_props_v2', JSON.stringify(allProperties));
+
+            closeAddAdModal();
+            showToast('تم نشر الإعلان بنجاح', 'تمت إضافة إعلانك وصورك المرفوعة بنجاح إلى الموقع!');
+            navigateTo(region);
+        }
+
+        // --- STATIC PAGES (ABOUT & CONTACT) ---
+        function renderAboutPage() {
+            return `
+                <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+                    <div class="text-center space-y-4">
+                        <span class="text-gold-400 font-bold text-xs tracking-widest uppercase">شركة الشريف للعقارات</span>
+                        <h1 class="text-4xl font-black text-white">من نحن</h1>
+                        <p class="text-gold-300 font-bold text-base">تحت إشراف الحاج أحمد الشريف</p>
+                        <p class="text-gray-300 text-sm leading-relaxed max-w-2xl mx-auto">
+                            نحن شركة الشريف للعقارات، نقوم بتقديم ونشر وتسهيل تملك وإيجار كافة الوحدات التجارية والسكنية والطبية في الفيوم الجديدة، حدائق أكتوبر، وهرم سيتي بنظام التقسيط المريح والتسهيلات المتميزة.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-2xl border border-gold-500/30 space-y-3">
+                            <i class="fa-solid fa-handshake text-gold-400 text-3xl"></i>
+                            <h3 class="text-lg font-bold text-white">المصداقية والتسهيلات</h3>
+                            <p class="text-xs text-gray-300">نلتزم بتوفير خطط تقسيط مريحة وخصومات فورية للكاش لجميع عملائنا الكرام.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-gold-500/30 space-y-3">
+                            <i class="fa-solid fa-building-circle-check text-gold-400 text-3xl"></i>
+                            <h3 class="text-lg font-bold text-white">تنوع الأنشطة</h3>
+                            <p class="text-xs text-gray-300">نغطي كافة القطاعات: سوبر ماركت، محلات، مكاتب، مراكز طبية، معامل تحاليل، عيادات، جيم، شقق ودوبلكس.</p>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderContactPage() {
+            return `
+                <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="glass-card p-8 rounded-2xl border border-gold-500/40 text-center space-y-8">
+                        <div>
+                            <span class="text-gold-400 font-bold text-xs">شركة الشريف للعقارات</span>
+                            <h1 class="text-3xl font-black text-white mt-1">تواصل معنا مباشرًة</h1>
+                            <p class="text-gold-300 font-bold text-sm mt-1">تحت إشراف الحاج أحمد الشريف</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-right max-w-2xl mx-auto">
+                            <a href="tel:01005881885" class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-gold-500 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-400 block">الهاتف الرئيسي</span>
+                                    <span class="text-lg font-black text-white">01005881885</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:01003826695" class="p-5 rounded-xl bg-navy-900 border border-navy-700 hover:border-gold-500 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-400 block">الهاتف الإضافي</span>
+                                    <span class="text-lg font-black text-white">01003826695</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://wa.me/201005881885" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base shadow-xl">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>محادثة واتساب مباشرة (01005881885)</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        window.onload = function() {
+            navigateTo('home');
+        }
+    </script>
+</body>
+</html>
